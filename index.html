@@ -96,9 +96,7 @@
 
 
         <script>
-            var e = document.getElementById("ddlViewBy");
-            var value = e.value;
-            var text = e.options[e.selectedIndex].text;
+          
            
             fetch("mydata.json")
                 .then(response => response.json())
@@ -153,6 +151,9 @@
                 .then(response => response.json())
                 .then(data => {
                     for (var i = 0; i<data.items.length; i++){
+                        var e = document.getElementById("ddlViewBy");
+                        var value = e.value;
+                        var text = e.options[e.selectedIndex].text;
                         if(data.items[i].District_en == text){
                             let vTitle_enwithdistrict = data.items[i].Title_en;
                             let vDistrict_enwithdistrict = data.items[i].District_en;
