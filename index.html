@@ -38,6 +38,7 @@
                         <option value="2">Central and Western</option>
                         <option value="3">test3</option>
                      </select>
+                    <input type="button" onclick="Area1()" value="Search for district" class="btn">
 
                 </div>        
             
@@ -152,7 +153,7 @@
                 .then(response => response.json())
                 .then(data => {
                     for (var i = 0; i<data.items.length; i++){
-                        if(data.items[i].District_en == "Central and Western"){
+                        if(data.items[i].District_en == text){
                             let vTitle_enwithdistrict = data.items[i].Title_en;
                             let vDistrict_enwithdistrict = data.items[i].District_en;
                             let vRoute_enwithdistrict = data.items[i].Route_en;
